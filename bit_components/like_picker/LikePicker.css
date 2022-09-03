@@ -1,0 +1,51 @@
+.like-picker{overflow:hidden;}
+.like-picker-star{
+    transition: color;
+    transition-duration: 500ms;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    }
+.like-picker-star, like-picker-description{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.like-picker-description {
+    text-align: center;
+    font-size: "xx-small";
+    color: "black"
+}
+
+.like-picker-star:hover::after{
+    content:'☆';
+    position: absolute;
+    left: 0;
+    animation-name: fall2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+.like-picker-star:hover::before {
+    content: '☆';
+    position: absolute;
+    left: 0;
+    animation-name: fall1;
+    animation-duration: 0.5s;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fall1 {
+    0%{ transform:translate(0%,0%);opacity: 1;}
+    25%{ transform:translate(10%,25%);opacity: 0.75;}
+    50%{ transform:translate(-10%,50%);opacity: 0.5;}
+    75%{ transform:translate(10%,75%); opacity: 0.25;}
+    100% {transform: translate(15%,100%); opacity: 0;}
+}
+@keyframes fall2 {
+    0%{ transform:translate(0%,0%); opacity: 1;}
+    25%{ transform:translate(-10%,25%); opacity: 0.75;}
+    50%{ transform:translate(0%,50%); opacity: 0.5;}
+    75% {transform: translate(10%, 75%); opacity: 0.25}
+    75% {transform:translate(-10%,75%); opacity: 0.25;}
+    100% {transform: translate(-15%,100%); opacity: 0;}
+}
