@@ -14,6 +14,8 @@ export type LikePickerProps = {
   descriptionStyle?: React.CSSProperties;
   style?: React.CSSProperties;
   valueDescription?: numericMap;
+  color?: string;
+  activeColor?: string;
 };
 
 export const LikePicker = ({
@@ -24,6 +26,8 @@ export const LikePicker = ({
   descriptionStyle,
   style,
   valueDescription,
+  color,
+  activeColor,
 }: LikePickerProps) => {
   const [state, setState] = useState({ selecting: 0 });
   const ref = useRef<HTMLDivElement>(null);
@@ -56,6 +60,8 @@ export const LikePicker = ({
               onHover={handleHover}
               onClick={handleClick}
               style={starStyle}
+              color={color}
+              activeColor={activeColor}
             />
           );
         })}

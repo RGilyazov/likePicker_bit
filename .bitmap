@@ -10,17 +10,10 @@
 
 {
     "like_picker": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "bboracul.bit_components",
+        "scope": "bboracul.bit_components",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "bit_components/like_picker",
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "bit_components/like_picker"
     },
     "$schema-version": "15.0.0"
 }

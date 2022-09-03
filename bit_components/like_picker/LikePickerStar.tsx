@@ -8,6 +8,8 @@ type LikePickerStarProps = {
   onHover?: (id: number) => void;
   onClick?: (id: number) => void;
   style?: React.CSSProperties;
+  color?: string;
+  activeColor?: string;
 };
 export const LikePickerStar = ({
   id,
@@ -16,6 +18,8 @@ export const LikePickerStar = ({
   onHover,
   onClick,
   style,
+  color = "yellow",
+  activeColor = "blue",
 }: LikePickerStarProps) => {
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
@@ -38,7 +42,7 @@ export const LikePickerStar = ({
   }, [ref, id, onHover, onClick]);
   return (
     <span
-      style={{ color: selecting ? "blue" : "yellow", ...style }}
+      style={{ color: selecting ? activeColor : color, ...style }}
       ref={ref}
       className="like-picker-star"
     >

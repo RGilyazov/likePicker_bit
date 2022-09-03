@@ -3,7 +3,7 @@ import { LikePicker } from "./like_picker";
 import { useState } from "react";
 
 export const BasicLikePicker = () => {
-  const [stars, setStars] = useState(1);
+  const [stars, setStars] = useState(3);
   function handleChange(value: number) {
     setStars(value);
   }
@@ -12,6 +12,7 @@ export const BasicLikePicker = () => {
       <LikePicker
         max={5}
         value={stars}
+        color="rgb(147,147,21)"
         onChange={handleChange}
         starStyle={{ fontSize: "3em" }}
         descriptionStyle={{ fontSize: "1em" }}
