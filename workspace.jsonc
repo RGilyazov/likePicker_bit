@@ -40,9 +40,11 @@
     "policy": {
       "dependencies": {
         "@testing-library/react": "13.3.0",
-        "react-dom": "18.2.0"
       },
-      "peerDependencies": {}
+      "peerDependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+      }
     },
     "linkCoreAspects": true
   },

@@ -11,7 +11,7 @@
 {
     "like_picker": {
         "scope": "bboracul.bit_components",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "bit_components/like_picker"
     },

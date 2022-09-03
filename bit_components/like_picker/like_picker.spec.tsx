@@ -1,9 +1,10 @@
 import React from "react";
-//import { render } from "@testing-library/react";
+import { Renderer } from "react-dom";
+import { render, screen } from "@testing-library/react";
 import { BasicLikePicker } from "./like_picker.composition";
 
 it("should render with the correct text", () => {
-  // const { getByText } = render(<BasicLikePicker />);
-  //const rendered = getByText("bad");
+  // render(<BasicLikePicker />);
+  // const rendered = screen.getByText("bad");
   expect(true).toBeTruthy();
 });
